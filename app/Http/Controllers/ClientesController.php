@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Clientes;
 use App\Http\Requests\ClientesRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class ClientesController extends Controller
@@ -12,9 +13,11 @@ class ClientesController extends Controller
     public function index(){
         $view = view('clientes.index');
 
+        //DB::enableQueryLog();
+
         $clientes = Clientes::all();
         // SELECT * FROM clientes;
-
+        //exit("<pre>" . print_r(DB::getQueryLog(), true) . "</pre>");
         $view->clientes = $clientes;
 
 
@@ -40,6 +43,13 @@ class ClientesController extends Controller
         $cliente->cpf = $request->get('cpf');
         $cliente->email = $request->get('email');
         $cliente->save();
+
+        return redirect(route('clientes'));
+    }
+
+    public function delete($id){
+        $cliente = Clientes::find($id);
+        $cliente->delete();
 
         return redirect(route('clientes'));
     }
