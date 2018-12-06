@@ -1,0 +1,2 @@
+@yield('sidebar')
+@yield('content')
