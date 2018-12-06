@@ -4,6 +4,9 @@
 
     <form>
 
+
+        {!! Form::cText('nome', 'Nome') !!}
+
         Nome
         <input type="nome"  />
 

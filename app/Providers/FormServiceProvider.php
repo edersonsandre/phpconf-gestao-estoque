@@ -13,6 +13,7 @@ class FormServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
         \Form::component('cText', 'components.text', ['name','label','value'=>null,
             'atributes' => []]);
     }
