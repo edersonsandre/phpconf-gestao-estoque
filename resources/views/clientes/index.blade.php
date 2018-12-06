@@ -25,7 +25,7 @@
                     <td>{!! $cliente->telefone !!}</td>
                     <td>{!! $cliente->cpf !!}</td>
                     <td>
-                        <a href="{!! route('clientes-edit', ['id', $cliente->id]) !!}"
+                        <a href="{!! route('clientes-edit', ['id' => $cliente->id]) !!}"
                            class="btn btn-info">
                             E
                         </a>

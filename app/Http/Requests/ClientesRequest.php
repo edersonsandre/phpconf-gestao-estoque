@@ -25,9 +25,9 @@ class ClientesRequest extends FormRequest
     {
         return [
             'nome' => 'required',
-            'email' => 'required|email|unique:clientes,email',
+            'email' => 'required|email|unique:clientes,email,'.$this->id,
             'telefone' => 'required',
-            'cpf' => 'unique:clientes,cpf'
+            'cpf' => 'unique:clientes,cpf,'.$this->id,
         ];
     }
 }

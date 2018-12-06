@@ -21,17 +21,20 @@ class ClientesController extends Controller
         return $view;
     }
 
-    public function  add(){
+    public function  add($id = null){
         $view = view('clientes.add');
-        $view->model = null;
+        $view->model = !is_null($id) ? Clientes::find($id) : null;
 
+        // SELECT * FROM clientes WHERE id = 1 LIMIT 1;
         return $view;
     }
 
     public function save(ClientesRequest $request){
 
 
-        $cliente = new Clientes();
+        $cliente = !is_null($request->get('id')) ?
+            Clientes::find($request->get('id')) : new Clientes();
+
         $cliente->nome = $request->get('nome');
         $cliente->telefone = $request->get('telefone');
         $cliente->cpf = $request->get('cpf');
