@@ -15,7 +15,7 @@ class FormServiceProvider extends ServiceProvider
     {
 
         \Form::component('cText', 'components.text', ['name','label','value'=>null,
-            'atributes' => []]);
+            'attributes' => []]);
     }
 
     /**
