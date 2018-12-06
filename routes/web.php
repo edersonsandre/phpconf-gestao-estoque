@@ -5,6 +5,7 @@ Route::get('/', function () {
 });
 
 Route::get('/clientes', 'ClientesController@index')->name('clientes');
+Route::get('/clientes/add', 'ClientesController@add')->name('clientes-add');
 
 
 //Route::get('clientes', function () {

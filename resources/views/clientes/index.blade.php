@@ -2,6 +2,11 @@
 
 @section('content')
 
+    <div style="text-align: right">
+        <a href="{!! route('clientes-add') !!}">Novo Registro</a>
+    </div>
+
+
     <table width="100%" border="1">
         <tr>
             <th>ID</th>
