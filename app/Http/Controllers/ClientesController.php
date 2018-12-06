@@ -22,8 +22,13 @@ class ClientesController extends Controller
 
     public function  add(){
         $view = view('clientes.add');
+        $view->model = null;
 
         return $view;
+    }
+
+    public function save(){
+
     }
 
 }

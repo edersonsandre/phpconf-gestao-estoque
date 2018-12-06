@@ -6,6 +6,7 @@ Route::get('/', function () {
 
 Route::get('/clientes', 'ClientesController@index')->name('clientes');
 Route::get('/clientes/add', 'ClientesController@add')->name('clientes-add');
+Route::post('/clientes', 'ClientesController@save')->name('clientes-save');
 
 
 //Route::get('clientes', function () {

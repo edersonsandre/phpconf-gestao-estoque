@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <form>
+
+    {!! Form::model($model, ['url' => route('clientes-save'), 'class'=>'form-vertical']) !!}
+        {!! Form::hidden('id') !!}
 
         <div class="row">
             <div class="col-md-6">{!! Form::cText('nome', 'Nome') !!}</div>
@@ -16,6 +18,6 @@
         </div>
 
 
-    </form>
+   {!! Form::close() !!}
 
 @stop
