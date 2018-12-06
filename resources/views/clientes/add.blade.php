@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <div style="margin: 20px 50px">
 
     {!! Form::model($model, ['url' => route('clientes-save'), 'class'=>'form-vertical']) !!}
         {!! Form::hidden('id') !!}
@@ -19,5 +20,6 @@
 
 
    {!! Form::close() !!}
+    </div>
 
 @stop
