@@ -1,2 +1,6 @@
-@yield('sidebar')
+
+<a href="{!! route('clientes') !!}" >Clientes</a>
+
+<hr />
+
 @yield('content')
