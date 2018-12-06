@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <table>
+    <table width="100%" border="1">
         <tr>
             <th>ID</th>
             <th>Nome</th>
